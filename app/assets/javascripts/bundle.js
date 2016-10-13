@@ -64,7 +64,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var mockTweets = [{ name: 'Sri Harsha Kappala', body: 'My #First Tweet' }, { name: 'Bay Emmar', body: 'My #Second Tweet' }, { name: 'Harsh', body: 'My #Third Tweet' }];
+	var mockTweets = [{ id: 1, name: 'Sri Harsha Kappala', body: 'My #First Tweet' }, { id: 2, name: 'Bay Emmar', body: 'My #Second Tweet' }, { id: 3, name: 'Harsh', body: 'My #Third Tweet' }];
 
 	var Main = function (_React$Component) {
 	  _inherits(Main, _React$Component);
@@ -168,6 +168,8 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _Tweet = __webpack_require__(3);
@@ -195,7 +197,7 @@
 	    key: 'render',
 	    value: function render() {
 	      var tweets = this.props.tweets.map(function (tweet) {
-	        return React.createElement(_Tweet2.default, tweet);
+	        return React.createElement(_Tweet2.default, _extends({ key: tweet.id }, tweet));
 	      });
 	      return React.createElement(
 	        'div',
