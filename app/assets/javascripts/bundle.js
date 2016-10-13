@@ -156,7 +156,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -180,28 +180,70 @@
 	  }
 
 	  _createClass(TweetsList, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
-	        "div",
+	        'div',
 	        null,
 	        React.createElement(
-	          "ul",
-	          null,
+	          'ul',
+	          { className: 'collection' },
 	          React.createElement(
-	            "li",
-	            null,
-	            "Tweet One..."
+	            'li',
+	            { className: 'collection-item avatar' },
+	            React.createElement(
+	              'i',
+	              { className: 'material-icons circle' },
+	              'person_pin'
+	            ),
+	            React.createElement(
+	              'span',
+	              { className: 'title' },
+	              'Sri Harsha Kappala'
+	            ),
+	            React.createElement(
+	              'p',
+	              null,
+	              'My #First tweet'
+	            )
 	          ),
 	          React.createElement(
-	            "li",
-	            null,
-	            "Tweet Two..."
+	            'li',
+	            { className: 'collection-item avatar' },
+	            React.createElement(
+	              'i',
+	              { className: 'material-icons circle' },
+	              'person_pin'
+	            ),
+	            React.createElement(
+	              'span',
+	              { className: 'title' },
+	              'Sri Harsha Kappala'
+	            ),
+	            React.createElement(
+	              'p',
+	              null,
+	              'My #Second tweet'
+	            )
 	          ),
 	          React.createElement(
-	            "li",
-	            null,
-	            "Tweet Three..."
+	            'li',
+	            { className: 'collection-item avatar' },
+	            React.createElement(
+	              'i',
+	              { className: 'material-icons circle' },
+	              'person_pin'
+	            ),
+	            React.createElement(
+	              'span',
+	              { className: 'title' },
+	              'Sri Harsha Kappala'
+	            ),
+	            React.createElement(
+	              'p',
+	              null,
+	              'My #Third tweet'
+	            )
 	          )
 	        )
 	      );
