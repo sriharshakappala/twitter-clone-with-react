@@ -64,8 +64,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var mockTweets = [{ id: 1, name: 'Sri Harsha Kappala', body: 'My #First Tweet' }, { id: 2, name: 'Bay Emmar', body: 'My #Second Tweet' }, { id: 3, name: 'Harsh', body: 'My #Third Tweet' }];
-
 	var Main = function (_React$Component) {
 	  _inherits(Main, _React$Component);
 
@@ -74,7 +72,7 @@
 
 	    var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
-	    _this.state = { tweetsList: mockTweets };
+	    _this.state = { tweetsList: [] };
 	    return _this;
 	  }
 
