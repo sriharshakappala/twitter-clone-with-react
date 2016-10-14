@@ -80,7 +80,11 @@
 
 	  _createClass(Main, [{
 	    key: 'addTweet',
-	    value: function addTweet(tweetToAdd) {}
+	    value: function addTweet(tweetToAdd) {
+	      var newTweetsList = this.state.tweetsList;
+	      newTweetsList.unshift({ id: Date.now(), name: 'Guest', body: tweetToAdd });
+	      this.setState({ tweetsList: newTweetsList });
+	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {

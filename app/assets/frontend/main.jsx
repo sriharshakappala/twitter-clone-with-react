@@ -13,7 +13,9 @@ class Main extends React.Component {
     this.state = { tweetsList: mockTweets };
   }
   addTweet(tweetToAdd) {
-
+    let newTweetsList = this.state.tweetsList;
+    newTweetsList.unshift({id: Date.now(), name: 'Guest', body: tweetToAdd });
+    this.setState({ tweetsList: newTweetsList });
   }
   render() {
     return (
