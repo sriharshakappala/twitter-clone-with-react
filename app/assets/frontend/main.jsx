@@ -8,11 +8,18 @@ let mockTweets = [
 ]
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { tweetsList: mockTweets };
+  }
+  addTweet(tweetToAdd) {
+
+  }
   render() {
     return (
       <div className='container'>
-        <TweetBox />
-        <TweetsList tweets={mockTweets} />
+        <TweetBox sendTweet={this.addTweet.bind(this)} />
+        <TweetsList tweets={this.state.tweetsList} />
       </div>
     );
   }
