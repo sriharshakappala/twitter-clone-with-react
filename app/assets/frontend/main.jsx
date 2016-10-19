@@ -1,5 +1,9 @@
 import TweetBox from './components/TweetBox'
 import TweetsList from './components/TweetsList'
+import TweetStore from './stores/TweetStore'
+
+import TweetActions from './actions/TweetActions'
+TweetActions.getAllTweets();
 
 class Main extends React.Component {
   constructor(props) {
