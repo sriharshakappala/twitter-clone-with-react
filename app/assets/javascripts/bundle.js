@@ -75,41 +75,34 @@
 	    _this.state = { tweetsList: [] };
 	    return _this;
 	  }
+	  // formattedTweets(tweetsList) {
+	  //   let formattedList = tweetsList.map(tweet => {
+	  //     tweet.formattedDate = moment(tweet.created_at).fromNow();
+	  //     return tweet;
+	  //   })
+	  //   return {
+	  //     tweetsList: formattedList
+	  //   };
+	  // }
+
 
 	  _createClass(Main, [{
-	    key: 'formattedTweets',
-	    value: function formattedTweets(tweetsList) {
-	      var formattedList = tweetsList.map(function (tweet) {
-	        tweet.formattedDate = moment(tweet.created_at).fromNow();
-	        return tweet;
-	      });
-	      return {
-	        tweetsList: formattedList
-	      };
-	    }
-	  }, {
 	    key: 'addTweet',
 	    value: function addTweet(tweetToAdd) {
-	      var _this2 = this;
-
-	      $.post('/tweets', { body: tweetToAdd }).success(function (savedTweet) {
-	        var newTweetsList = _this2.state.tweetsList;
-	        newTweetsList.unshift(savedTweet);
-	        _this2.setState(_this2.formattedTweets(newTweetsList));
-	      }).error(function (error) {
-	        return console.log(error);
-	      });
+	      // $.post('/tweets', { body: tweetToAdd })
+	      // .success(savedTweet => {
+	      //   let newTweetsList = this.state.tweetsList;
+	      //   newTweetsList.unshift(savedTweet);
+	      //   this.setState(this.formattedTweets(newTweetsList));
+	      // })
+	      // .error(error => console.log(error));
 	    }
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      var _this3 = this;
-
-	      $.ajax("/tweets").success(function (data) {
-	        return _this3.setState(_this3.formattedTweets(data));
-	      }).error(function (error) {
-	        return console.log(error);
-	      });
+	      // $.ajax("/tweets")
+	      // .success(data => this.setState(this.formattedTweets(data)))
+	      // .error(error => console.log(error));
 	    }
 	  }, {
 	    key: 'render',
