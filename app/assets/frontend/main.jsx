@@ -15,15 +15,6 @@ class Main extends React.Component {
     this.state = getAppState();
     this._onChange = this._onChange.bind(this);
   }
-  addTweet(tweetToAdd) {
-    // $.post('/tweets', { body: tweetToAdd })
-    // .success(savedTweet => {
-    //   let newTweetsList = this.state.tweetsList;
-    //   newTweetsList.unshift(savedTweet);
-    //   this.setState(this.formattedTweets(newTweetsList));
-    // })
-    // .error(error => console.log(error));
-  }
   componentDidMount() {
     TweetStore.addChangeListener(this._onChange);
   }
@@ -37,7 +28,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className='container'>
-        <TweetBox sendTweet={this.addTweet.bind(this)} />
+        <TweetBox />
         <TweetsList tweets={this.state.tweetsList} />
       </div>
     );
