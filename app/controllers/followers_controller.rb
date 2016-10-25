@@ -5,7 +5,7 @@ class FollowersController < ApplicationController
   end
 
   def create
-    Follower.create(user_id: params[:user_id], followed_by: current_user.id)
+    follower = Follower.create(user_id: params[:user_id], followed_by: current_user.id)
     render json: follower
   end
 
