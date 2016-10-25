@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './components/Index'
+import Follow from './components/Follow'
 import { hashHistory } from 'react-router'
 
 import { Router, Route, Link } from 'react-router'
@@ -22,6 +23,7 @@ let documentReady = () => {
       <Router history={hashHistory}>
         <Route component={App}>
           <Route path='/' component={Index}></Route>
+          <Route path='/follow' component={Follow}></Route>
         </Route>
       </Router>,
       reactNode
